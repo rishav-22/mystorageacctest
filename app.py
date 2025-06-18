@@ -24,9 +24,9 @@ def entra_access():
     try:
         credential = DefaultAzureCredential()
         blob = BlobClient(
-            account_url="https://mystorageaccountlab.blob.core.windows.net",
+            account_url="https://mystorageaccountlabvwits.blob.core.windows.net",
             container_name="testcontainer",
-            blob_name="sample.txt",
+            blob_name="env_variable_names",
             credential=credential
         )
         data = blob.download_blob().readall()
