@@ -26,7 +26,7 @@ def entra_access():
         blob = BlobClient(
             account_url="https://mystorageaccountlabvwits.blob.core.windows.net",
             container_name="testcontainer",
-            blob_name="env_variable_names",
+            blob_name="env_variable_names.txt",
             credential=credential
         )
         data = blob.download_blob().readall()
