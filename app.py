@@ -12,7 +12,7 @@ def home():
 @app.route("/sas")
 def sas_access():
     # Replace <SAS_TOKEN> with your actual SAS token (URL-encoded)
-    sas_url = "https://mystorageaccountlabvwits.blob.core.windows.net/testcontainer?sp=r&st=2025-06-18T20:30:35Z&se=2025-06-27T04:30:35Z&spr=https&sv=2024-11-04&sr=c&sig=5NeaByaI9TEbnLEet%2BBjoDGLuDahAgVdzeh1%2BZNHdI8%3D"
+    sas_url = "https://mystorageaccountlabvwits.blob.core.windows.net/testcontainer/env_variable_names.txt?sp=r&st=2025-06-18T20:35:57Z&se=2025-06-26T04:35:57Z&spr=https&sv=2024-11-04&sr=b&sig=12PuD3ANV2AEQWXnYg%2FsR9vwpZluQA2eq2U%2BHrtUmNw%3D"
     response = requests.get(sas_url)
     if response.status_code == 200:
         return f"✅ SAS Access Successful:\n\n{response.text}"
